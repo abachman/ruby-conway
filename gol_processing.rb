@@ -8,7 +8,7 @@ class GolProcessing < Processing::App
   VIDEOSCALE  = 16
 
   def setup
-    @grid = game_from_lifewiki_text_file "/Users/light/Downloads/newgun2.cells"
+    @grid = game_from_lifewiki_text_file File.join(File.dirname(__FILE__), "newgun2.cells")
     @cols = WIDTH / VIDEOSCALE
     @rows = HEIGHT / VIDEOSCALE
     @prev_state = nil
